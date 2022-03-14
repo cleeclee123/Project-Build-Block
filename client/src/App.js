@@ -1,11 +1,11 @@
 import './App.css';
 import Button from 'react-bootstrap/Button';
-import Navbar from 'react-bootstrap/Navbar';
-import { Container, Nav, } from 'react-bootstrap';
+import { Navbar, Nav, } from 'react-bootstrap';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import Block from './Block';
 import Canvas from './Canvas';
+import Home from './Home';
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
         </Nav>
       </Navbar>
       <main className='p-3'>
+        <Home/>
         <DndProvider backend={HTML5Backend}>
           Main Content
           <div className='w-25'>

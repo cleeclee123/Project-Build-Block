@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Kanit-BlackItalic';
+    src: url('../public/fonts/Kanit/Kanit-BlackItalic.ttf'); /* IE9 Compat Modes */
+  }
+
+.logo-text {
+    font-family: 'Kanit-BlackItalic';
+    letter-spacing: 1px;
+    font-size: 25px;
+}

@@ -2,11 +2,12 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import { Navbar, Nav, } from 'react-bootstrap';
-import { DndProvider } from 'react-dnd';
-import { HTML5Backend } from 'react-dnd-html5-backend';
+
 import Block from './Block';
 import Canvas from './Canvas';
 import Home from './Home';
+import Build from './Build';
+import * as Icon from 'react-bootstrap-icons';
 
 function App() {
   return (
@@ -25,19 +26,15 @@ function App() {
           <Nav.Link href='/contact'>Contact</Nav.Link>
         </Nav>
         <Nav>
-          <Nav.Link href='/login'>Login</Nav.Link>
+          <Nav.Link href='/login' className='d-flex align-items-center'>
+            <Icon.BoxArrowInRight fontSize={"1.5rem"} className="me-2" /><span>Login</span>
+          </Nav.Link>
         </Nav>
       </Navbar>
       <main className='p-3'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/build' element={<DndProvider backend={HTML5Backend}>
-            Main Content
-            <div className='w-25'>
-              <Block draggable id="test" name="test" />
-            </div>
-            <Canvas />
-          </DndProvider>} />
+          <Route path='/build' element={<Build />} />
           <Route></Route>
         </Routes>
       </main>
